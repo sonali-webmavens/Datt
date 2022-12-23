@@ -21,23 +21,11 @@
                         <li class="nav-item"><a class="nav-link" href="{{route('home')}}">home</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{route('about')}}">About</a></li>
 
-
-                        @guest
-                        <li class="nav-item"><a class="nav-link" href="{{route('login')}}">login</a></li>
-                        @endguest
-
-                        @auth
                         <li class="nav-item"><a class="nav-link" href="{{route('company.index')}}">company</a></li>
 
                         <li class="nav-item"><a class="nav-link" href="{{route('employee.index')}}">employee</a></li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"  onclick="document.getElementById('logout-form').submit()">Logout</a>
-                        </li>
-                        <form action=" {{route('logout')}} " method="POST" id="logout-form" >
-                            @csrf
-                        </form>
-                        @endauth
+                       
                     </ul>
                 </div>
             </div>
